@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "typeRoots": ["./node_modules/@types"],
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "sourceMap": true,
+    "outDir": "./dist"
+  },
+  "lib": ["es2015"]
+}

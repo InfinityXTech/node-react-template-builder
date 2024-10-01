@@ -1,0 +1,80 @@
+import SortableElement from "./sortable-element.tsx";
+import PlaceHolder from "./form-place-holder.tsx";
+import BaseFormElements from "./form-elements/index.tsx";
+import {
+  TwoColumnRow,
+  ThreeColumnRow,
+  MultiColumnRow,
+} from "./multi-column/index.ts";
+import { FieldSet } from "./fieldset/index.ts";
+import CustomElement from "./form-elements/custom-element.tsx";
+
+const {
+  Header,
+  Paragraph,
+  Label,
+  LineBreak,
+  TextInput,
+  EmailInput,
+  PhoneNumber,
+  NumberInput,
+  TextArea,
+  Dropdown,
+  Checkboxes,
+  DatePicker,
+  RadioButtons,
+  Image,
+  Rating,
+  Tags,
+  Signature,
+  HyperLink,
+  Download,
+  Camera,
+  Range,
+  FileUpload,
+  Table,
+  Badge,
+  Button,
+  Icon,
+  Progressbar,
+  Social,
+} = BaseFormElements;
+
+const FormElements = {
+  Header: SortableElement(Header),
+  Paragraph: SortableElement(Paragraph),
+  Label: SortableElement(Label),
+  LineBreak: SortableElement(LineBreak),
+  TextInput: SortableElement(TextInput),
+  EmailInput: SortableElement(EmailInput),
+  PhoneNumber: SortableElement(PhoneNumber),
+  NumberInput: SortableElement(NumberInput),
+  TextArea: SortableElement(TextArea),
+  Dropdown: SortableElement(Dropdown),
+  Signature: SortableElement(Signature),
+  Checkboxes: SortableElement(Checkboxes),
+  DatePicker: SortableElement(DatePicker),
+  RadioButtons: SortableElement(RadioButtons),
+  Image: SortableElement(Image),
+  Rating: SortableElement(Rating),
+  Tags: SortableElement(Tags),
+  HyperLink: SortableElement(HyperLink),
+  Download: SortableElement(Download),
+  Camera: SortableElement(Camera),
+  FileUpload: SortableElement(FileUpload),
+  Range: SortableElement(Range),
+  PlaceHolder: SortableElement(PlaceHolder),
+  FieldSet: SortableElement(FieldSet),
+  TwoColumnRow: SortableElement(TwoColumnRow),
+  ThreeColumnRow: SortableElement(ThreeColumnRow),
+  MultiColumnRow: SortableElement(MultiColumnRow),
+  CustomElement: SortableElement(CustomElement),
+  Table: SortableElement(Table),
+  Badge: SortableElement(Badge),
+  Button: SortableElement(Button),
+  Icon: SortableElement(Icon),
+  Progressbar: SortableElement(Progressbar),
+  Social: SortableElement(Social),
+};
+
+export default FormElements;

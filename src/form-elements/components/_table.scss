@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+.table:not(.table-bordered) > :not(:first-child) {
+  border-color: transparent;
+  border-width: 0;
+  border-style: none;
+}
+.table:not(.table-bordered) > :not(:last-child) > :last-child > * {
+  border-bottom-color: inherit;
+}
+.table:not(.table-bordered) tr, .table:not(.table-bordered) th, .table:not(.table-bordered) td {
+  border-color: inherit;
+  border-width: inherit;
+  border-style: inherit;
+  text-transform: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  height: inherit;
+  min-height: inherit;
+}
+.table:not(.table-bordered) tr:first-child, .table:not(.table-bordered) th:first-child, .table:not(.table-bordered) td:first-child {
+  padding-left: 0;
+}
+.table:not(.table-bordered) tr:last-child, .table:not(.table-bordered) th:last-child, .table:not(.table-bordered) td:last-child {
+  padding-right: 0;
+}
+.table:not(.table-bordered) tfoot tr:last-child, .table:not(.table-bordered) tbody tr:last-child {
+  border-bottom: 0 !important;
+}
+.table:not(.table-bordered) tfoot tr:last-child th, .table:not(.table-bordered) tbody tr:last-child th, .table:not(.table-bordered) tfoot tr:last-child td, .table:not(.table-bordered) tbody tr:last-child td {
+  border-bottom: 0 !important;
+}
+.table:not(.table-bordered) tfoot th, .table:not(.table-bordered) tfoot td {
+  border-top: inherit;
+}
+.table:not(.table-bordered).table-rounded {
+  border-radius: 0.475rem;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+.table:not(.table-bordered).table-flush tr, .table:not(.table-bordered).table-flush th, .table:not(.table-bordered).table-flush td {
+  padding: inherit;
+}
+.table:not(.table-bordered).table-row-bordered tr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border-color);
+}
+.table:not(.table-bordered).table-row-bordered tfoot th, .table:not(.table-bordered).table-row-bordered tfoot td {
+  border-top-width: 1px !important;
+}
+.table:not(.table-bordered).table-row-dashed tr {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: var(--border-color);
+}
+.table:not(.table-bordered).table-row-dashed tfoot th, .table:not(.table-bordered).table-row-dashed tfoot td {
+  border-top-width: 1px !important;
+}
+.table:not(.table-bordered).table-row-gray-100 tr {
+  border-bottom-color: var(--gray-100);
+}
+.table:not(.table-bordered).table-row-gray-200 tr {
+  border-bottom-color: var(--gray-200);
+}
+.table:not(.table-bordered).table-row-gray-300 tr {
+  border-bottom-color: var(--gray-300);
+}
+.table:not(.table-bordered).table-row-gray-400 tr {
+  border-bottom-color: var(--gray-400);
+}
+.table:not(.table-bordered).table-row-gray-500 tr {
+  border-bottom-color: var(--gray-500);
+}
+.table:not(.table-bordered).table-row-gray-600 tr {
+  border-bottom-color: var(--gray-600);
+}
+.table:not(.table-bordered).table-row-gray-700 tr {
+  border-bottom-color: var(--gray-700);
+}
+.table:not(.table-bordered).table-row-gray-800 tr {
+  border-bottom-color: var(--gray-800);
+}
+.table:not(.table-bordered).table-row-gray-900 tr {
+  border-bottom-color: var(--gray-900);
+}
+.table-layout-fixed {
+  table-layout: fixed;
+}
+.table-sort:after {
+  opacity: 0;
+}
+.table-sort, .table-sort-asc, .table-sort-desc {
+  vertical-align: middle;
+}
+.table-sort:after, .table-sort-asc:after, .table-sort-desc:after {
+  position: relative;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  content: ' ';
+  bottom: auto;
+  right: auto;
+  left: auto;
+  margin-left: 0.5rem;
+}
+.table-sort-asc:after {
+  opacity: 1;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background-color: var(--text-muted);
+  -webkit-mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6' fill='var(--text-muted)'><path d='M3.23571 2.72011L4.97917 4.46358C5.15176 4.63618 5.43158 4.63617 5.60417 4.46358C5.77676 4.29099 5.77676 4.01118 5.60417 3.83861L3.29463 1.52904C3.13192 1.36629 2.86809 1.36629 2.70538 1.52904L0.395812 3.83861C0.22325 4.01117 0.22325 4.29099 0.395812 4.46358C0.568437 4.63617 0.84825 4.63617 1.02081 4.46358L2.76429 2.72011C2.89446 2.58994 3.10554 2.58994 3.23571 2.72011Z'/></svg>"));
+  mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6' fill='var(--text-muted)'><path d='M3.23571 2.72011L4.97917 4.46358C5.15176 4.63618 5.43158 4.63617 5.60417 4.46358C5.77676 4.29099 5.77676 4.01118 5.60417 3.83861L3.29463 1.52904C3.13192 1.36629 2.86809 1.36629 2.70538 1.52904L0.395812 3.83861C0.22325 4.01117 0.22325 4.29099 0.395812 4.46358C0.568437 4.63617 0.84825 4.63617 1.02081 4.46358L2.76429 2.72011C2.89446 2.58994 3.10554 2.58994 3.23571 2.72011Z'/></svg>"));
+}
+.table-sort-desc:after {
+  opacity: 1;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background-color: var(--text-muted);
+  -webkit-mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6' fill='var(--text-muted)'><path d='M2.76429 3.27989L1.02083 1.53642C0.848244 1.36382 0.568419 1.36383 0.395831 1.53642C0.223244 1.70901 0.223244 1.98882 0.395831 2.16139L2.70537 4.47096C2.86808 4.63371 3.13191 4.63371 3.29462 4.47096L5.60419 2.16139C5.77675 1.98883 5.77675 1.70901 5.60419 1.53642C5.43156 1.36383 5.15175 1.36383 4.97919 1.53642L3.23571 3.27989C3.10554 3.41006 2.89446 3.41006 2.76429 3.27989Z'/></svg>"));
+  mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6' fill='var(--text-muted)'><path d='M2.76429 3.27989L1.02083 1.53642C0.848244 1.36382 0.568419 1.36383 0.395831 1.53642C0.223244 1.70901 0.223244 1.98882 0.395831 2.16139L2.70537 4.47096C2.86808 4.63371 3.13191 4.63371 3.29462 4.47096L5.60419 2.16139C5.77675 1.98883 5.77675 1.70901 5.60419 1.53642C5.43156 1.36383 5.15175 1.36383 4.97919 1.53642L3.23571 3.27989C3.10554 3.41006 2.89446 3.41006 2.76429 3.27989Z'/></svg>"));
+}
+.table-loading-message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: var(--table-loading-message-box-shadow);
+  background-color: var(--body-bg);
+  color: var(--gray-700);
+  font-weight: 600;
+  margin: 0 !important;
+  width: auto;
+  padding: 0.85rem 2rem !important;
+  transform: translateX(-50%) translateY(-50%);
+}
+.table-loading {
+  position: relative;
+}
+.table-loading .table-loading-message {
+  display: block;
+}

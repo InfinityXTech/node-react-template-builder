@@ -1,0 +1,66 @@
+{
+  "parser": "babel-eslint",
+  // "parser": "@typescript-eslint/parser",
+  "extends": [
+    // "airbnb-base"
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "google"
+  ],
+  "plugins": ["react"],
+  "parserOptions": {
+    // "ecmaVersion": 6,
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "modules": true,
+        "experimentalObjectRestSpread": true
+    }
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true
+  },
+  "rules": {
+    "max-len": [1, 180, 2, { "ignoreComments": true }],
+    "semi": [2, "always"],
+    "comma-dangle": "off",
+    "camelcase": "warn",
+    "prefer-destructuring": "warn",
+    "no-param-reassign": "warn",
+    "linebreak-style": 0,
+    "operator-linebreak": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "arrow-parens": "off",
+    "indent": "off",
+    "no-plusplus": "off",
+    "no-return-assign": "off",
+    "object-curly-newline": "off",
+    "no-prototype-builtins": "warn",
+    "react/jsx-uses-vars": [2],
+    "react/jsx-uses-react": 1,
+    "quotes": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "no-ternary": "off",
+    "multiline-ternary": "off",
+    "no-nested-ternary": "off",
+    "no-multi-assign": "off",
+    "no-bitwise": "off",
+    "no-mixed-operators": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {"devDependencies": true}
+    ],
+    "allowSyntheticDefaultImports": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}
